@@ -1,0 +1,50 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myVehicleFuelTypeLabel" data-translate="assignment2App.vehicleFuelType.home.createOrEditLabel">Create or edit a Vehicle Fuel Type</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.vehicleFuelType.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.vehicleFuelType.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="assignment2App.vehicleFuelType.fuelDesc" for="field_fuelDesc">Fuel Desc</label>
+            <input type="text" class="form-control" name="fuelDesc" id="field_fuelDesc"
+                    ng-model="vm.vehicleFuelType.fuelDesc"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="assignment2App.vehicleFuelType.postalCode" for="field_postalCode">Postal Code</label>
+            <input type="text" class="form-control" name="postalCode" id="field_postalCode"
+                    ng-model="vm.vehicleFuelType.postalCode"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="assignment2App.vehicleFuelType.city" for="field_city">City</label>
+            <input type="text" class="form-control" name="city" id="field_city"
+                    ng-model="vm.vehicleFuelType.city"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="assignment2App.vehicleFuelType.stateProvince" for="field_stateProvince">State Province</label>
+            <input type="text" class="form-control" name="stateProvince" id="field_stateProvince"
+                    ng-model="vm.vehicleFuelType.stateProvince"
+                    />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

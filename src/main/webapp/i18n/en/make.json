@@ -1,0 +1,23 @@
+{
+    "assignment2App": {
+        "make" : {
+            "home": {
+                "title": "Makes",
+                "createLabel": "Create a new Make",
+                "createOrEditLabel": "Create or edit a Make",
+                "search": "Search for Make"
+            },
+            "created": "A new Make is created with identifier {{ param }}",
+            "updated": "A Make is updated with identifier {{ param }}",
+            "deleted": "A Make is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Make {{ id }}?"
+            },
+            "detail": {
+                "title": "Make"
+            },
+            "make": "Make",
+            "model": "Model"
+        }
+    }
+}

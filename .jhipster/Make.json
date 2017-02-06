@@ -1,0 +1,22 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "model",
+            "otherEntityName": "model",
+            "otherEntityRelationshipName": "make"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "make",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20170206071803",
+    "entityTableName": "make",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no"
+}

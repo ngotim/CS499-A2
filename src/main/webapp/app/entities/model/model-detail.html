@@ -1,0 +1,27 @@
+
+<div>
+    <h2><span data-translate="assignment2App.model.detail.title">Model</span> {{vm.model.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row jh-entity-details">
+        <dt><span data-translate="assignment2App.model.modelName">Model Name</span></dt>
+        <dd>
+            <span>{{vm.model.modelName}}</span>
+        </dd>
+        <dt><span data-translate="assignment2App.model.make">Make</span></dt>
+        <dd>
+            <a ui-sref="make-detail({id:vm.model.make.id})">{{vm.model.make.id}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="model-detail.edit({id:vm.model.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

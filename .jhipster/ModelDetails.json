@@ -1,0 +1,44 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "model",
+            "otherEntityName": "model",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "fuelType",
+            "otherEntityName": "vehicleFuelType",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "bodyStyle",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "color",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "mpg",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "currMiles",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "price",
+            "fieldType": "Double"
+        }
+    ],
+    "changelogDate": "20170206071803",
+    "entityTableName": "model_details",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no"
+}

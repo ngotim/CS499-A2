@@ -1,0 +1,28 @@
+{
+    "assignment2App": {
+        "modelDetails" : {
+            "home": {
+                "title": "Model Details",
+                "createLabel": "Create a new Model Details",
+                "createOrEditLabel": "Create or edit a Model Details",
+                "search": "Search for Model Details"
+            },
+            "created": "A new Model Details is created with identifier {{ param }}",
+            "updated": "A Model Details is updated with identifier {{ param }}",
+            "deleted": "A Model Details is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Model Details {{ id }}?"
+            },
+            "detail": {
+                "title": "Model Details"
+            },
+            "bodyStyle": "Body Style",
+            "color": "Color",
+            "mpg": "Mpg",
+            "currMiles": "Curr Miles",
+            "price": "Price",
+            "model": "Model",
+            "fuelType": "Fuel Type"
+        }
+    }
+}

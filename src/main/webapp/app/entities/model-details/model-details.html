@@ -1,0 +1,72 @@
+<div>
+    <h2 data-translate="assignment2App.modelDetails.home.title">Model Details</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="model-details.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span  data-translate="assignment2App.modelDetails.home.createLabel">
+                        Create new Model Details
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span data-translate="global.field.id">ID</span></th>
+                    <th><span data-translate="assignment2App.modelDetails.bodyStyle">Body Style</span></th>
+                    <th><span data-translate="assignment2App.modelDetails.color">Color</span></th>
+                    <th><span data-translate="assignment2App.modelDetails.mpg">Mpg</span></th>
+                    <th><span data-translate="assignment2App.modelDetails.currMiles">Curr Miles</span></th>
+                    <th><span data-translate="assignment2App.modelDetails.price">Price</span></th>
+                    <th><span data-translate="assignment2App.modelDetails.model">Model</span></th>
+                    <th><span data-translate="assignment2App.modelDetails.fuelType">Fuel Type</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="modelDetails in vm.modelDetails track by modelDetails.id">
+                    <td><a ui-sref="model-details-detail({id:modelDetails.id})">{{modelDetails.id}}</a></td>
+                    <td>{{modelDetails.bodyStyle}}</td>
+                    <td>{{modelDetails.color}}</td>
+                    <td>{{modelDetails.mpg}}</td>
+                    <td>{{modelDetails.currMiles}}</td>
+                    <td>{{modelDetails.price}}</td>
+                    <td>
+                        <a ui-sref="model-detail({id:modelDetails.model.id})">{{modelDetails.model.id}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="vehicle-fuel-type-detail({id:modelDetails.fuelType.id})">{{modelDetails.fuelType.id}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="model-details-detail({id:modelDetails.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="model-details.edit({id:modelDetails.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="model-details.delete({id:modelDetails.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

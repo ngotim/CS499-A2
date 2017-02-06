@@ -1,0 +1,25 @@
+{
+    "assignment2App": {
+        "vehicleFuelType" : {
+            "home": {
+                "title": "Vehicle Fuel Types",
+                "createLabel": "Create a new Vehicle Fuel Type",
+                "createOrEditLabel": "Create or edit a Vehicle Fuel Type",
+                "search": "Search for Vehicle Fuel Type"
+            },
+            "created": "A new Vehicle Fuel Type is created with identifier {{ param }}",
+            "updated": "A Vehicle Fuel Type is updated with identifier {{ param }}",
+            "deleted": "A Vehicle Fuel Type is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Vehicle Fuel Type {{ id }}?"
+            },
+            "detail": {
+                "title": "Vehicle Fuel Type"
+            },
+            "fuelDesc": "Fuel Desc",
+            "postalCode": "Postal Code",
+            "city": "City",
+            "stateProvince": "State Province"
+        }
+    }
+}

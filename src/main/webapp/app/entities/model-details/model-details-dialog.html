@@ -1,0 +1,68 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myModelDetailsLabel" data-translate="assignment2App.modelDetails.home.createOrEditLabel">Create or edit a Model Details</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.modelDetails.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.modelDetails.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="assignment2App.modelDetails.bodyStyle" for="field_bodyStyle">Body Style</label>
+            <input type="text" class="form-control" name="bodyStyle" id="field_bodyStyle"
+                    ng-model="vm.modelDetails.bodyStyle"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="assignment2App.modelDetails.color" for="field_color">Color</label>
+            <input type="text" class="form-control" name="color" id="field_color"
+                    ng-model="vm.modelDetails.color"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="assignment2App.modelDetails.mpg" for="field_mpg">Mpg</label>
+            <input type="number" class="form-control" name="mpg" id="field_mpg"
+                    ng-model="vm.modelDetails.mpg"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="assignment2App.modelDetails.currMiles" for="field_currMiles">Curr Miles</label>
+            <input type="text" class="form-control" name="currMiles" id="field_currMiles"
+                    ng-model="vm.modelDetails.currMiles"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="assignment2App.modelDetails.price" for="field_price">Price</label>
+            <input type="number" class="form-control" name="price" id="field_price"
+                    ng-model="vm.modelDetails.price"
+                    />
+        </div>
+
+        <div class="form-group">
+            <label data-translate="assignment2App.modelDetails.model" for="field_model">Model</label>
+            <select class="form-control" id="field_model" name="model" ng-model="vm.modelDetails.model" ng-options="model as model.id for model in vm.models track by model.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label data-translate="assignment2App.modelDetails.fuelType" for="field_fuelType">Fuel Type</label>
+            <select class="form-control" id="field_fuelType" name="fuelType" ng-model="vm.modelDetails.fuelType" ng-options="vehicleFuelType as vehicleFuelType.id for vehicleFuelType in vm.vehiclefueltypes track by vehicleFuelType.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

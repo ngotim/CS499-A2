@@ -1,0 +1,47 @@
+
+<div>
+    <h2><span data-translate="assignment2App.modelDetails.detail.title">Model Details</span> {{vm.modelDetails.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row jh-entity-details">
+        <dt><span data-translate="assignment2App.modelDetails.bodyStyle">Body Style</span></dt>
+        <dd>
+            <span>{{vm.modelDetails.bodyStyle}}</span>
+        </dd>
+        <dt><span data-translate="assignment2App.modelDetails.color">Color</span></dt>
+        <dd>
+            <span>{{vm.modelDetails.color}}</span>
+        </dd>
+        <dt><span data-translate="assignment2App.modelDetails.mpg">Mpg</span></dt>
+        <dd>
+            <span>{{vm.modelDetails.mpg}}</span>
+        </dd>
+        <dt><span data-translate="assignment2App.modelDetails.currMiles">Curr Miles</span></dt>
+        <dd>
+            <span>{{vm.modelDetails.currMiles}}</span>
+        </dd>
+        <dt><span data-translate="assignment2App.modelDetails.price">Price</span></dt>
+        <dd>
+            <span>{{vm.modelDetails.price}}</span>
+        </dd>
+        <dt><span data-translate="assignment2App.modelDetails.model">Model</span></dt>
+        <dd>
+            <a ui-sref="model-detail({id:vm.modelDetails.model.id})">{{vm.modelDetails.model.id}}</a>
+        </dd>
+        <dt><span data-translate="assignment2App.modelDetails.fuelType">Fuel Type</span></dt>
+        <dd>
+            <a ui-sref="vehicle-fuel-type-detail({id:vm.modelDetails.fuelType.id})">{{vm.modelDetails.fuelType.id}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="model-details-detail.edit({id:vm.modelDetails.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

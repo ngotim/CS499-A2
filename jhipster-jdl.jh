@@ -1,0 +1,30 @@
+entity Make{
+	make String
+}
+
+
+entity Model {
+	modelName String
+}
+entity ModelDetails{
+	bodyStyle String,
+    color String,
+    mpg Double,
+    currMiles String,
+    price Double
+}
+entity VehicleFuelType {
+	fuelDesc String,
+	postalCode String,
+	city String,
+	stateProvince String
+}
+relationship OneToMany {
+	Make{model} to Model
+}
+relationship OneToMany{
+	Model{details} to ModelDetails
+}
+relationship ManyToOne {
+	ModelDetails{fuelType} to VehicleFuelType
+}
